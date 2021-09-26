@@ -7,8 +7,8 @@ module OmniAuth
 
       option :client_options, {
         site:          'https://login.microsoftonline.com/',
-        token_url:     'common/oauth2/v2.0/token',
-        authorize_url: 'common/oauth2/v2.0/authorize'
+        token_url:     'microsoft.onmicrosoft.com/oauth2/v2.0/token',
+        authorize_url: 'microsoft.onmicrosoft.com/oauth2/v2.0/authorize'
       }
 
       option :authorize_params, {
@@ -44,7 +44,7 @@ module OmniAuth
 
       def callback_url
         options[:callback_url] || full_host + script_name + callback_path
-      end      
+      end
     end
   end
 end
